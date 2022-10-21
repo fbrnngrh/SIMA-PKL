@@ -62,7 +62,7 @@ class Audit extends CI_Controller
                 $tanggal = $waktuaudit['tanggal'];
                 $waktu = $waktuaudit['waktu'];
                 $waktu = str_replace(':', '', $waktu);
-                if ($tanggal == $tglnow && $wktnow >= $waktu && $waktuaudit['keterangan'] == 'waiting') {
+                if ($tanggal == $tglnow && $wktnow >= $waktu && $waktuaudit['keterangan'] == 'in progress') {
                     $up = [
                         'idjadwal_audit' => $waktuaudit['idjadwal_audit'],
                         'keterangan' => 'in progress'
